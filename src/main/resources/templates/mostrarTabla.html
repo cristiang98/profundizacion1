@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lista de camiones</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .par {
+            background-color: #F5B7B1;
+        }
+        .impar {
+            background-color: #A9CCE3 ;
+        }
+        .tt {
+            background-color: #D7BDE2;
+        }
+
+        .container {
+            width: 50%;
+            margin: 0 auto;
+            text-align: center;
+            margin-top: 100px;
+            height: 50vh;
+            font-size:20px;
+            box-shadow: 0 0 10px 0 rgba(0,0,0,0.9);
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 10%;
+        }
+
+        table{
+
+            width: 100%;
+            margin: 10%;
+            margin-left: 35%;
+            align-content: center;
+            justify-content: center;
+            border-collapse: collapse;
+            border: 1px solid black;
+
+
+
+        th, td {
+            border: 1px solid black;
+            padding: 7px;
+        }
+    </style>
+</head>
+<body>
+
+
+<div class="container">
+<h1>Lista de camiones</h1>
+<table style="width: 30%;">
+    <tr style="text-align: left;" class="tt">
+        <th>ID</th>
+        <th>Marca</th>
+        <th>Modelo</th>
+        <th>Capacidad de Carga</th>
+    </tr>
+    <tr th:each="camion, camionStat : ${Camion}" th:class="${camionStat.odd ? 'impar' : 'par'}">
+        <td th:text="${camion.id}"></td>
+        <td th:text="${camion.marca}"></td>
+        <td th:text="${camion.modelo}"></td>
+        <td th:text="${camion.capacidadcarga}"></td>
+
+
+
+    </tr>
+</table>
+</div>
+</body>
+</html>

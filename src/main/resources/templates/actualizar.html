@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <h1>Formulario de Camiones</h1>
+
+    <form action="/edit" method="post">
+        <label for="id" class="label">Id del camion</label>
+        <input id="id" type="hidden" name="id" value="${camion.id}">
+        <label for="marca" class="label">Marca del camion</label>
+        <input id="marca" name="marca" type="text" placeholder="Ingrese la marca del camion" class="input"/> <br>
+        <label for="modelo" class="label">Modelo del camion</label>
+        <input id="modelo" name="modelo" type="text" placeholder="Ingrese modelo del camion" class="input"/><br>
+        <label for="capacidadcarga" class="label">Capacidad del vehiculo</label>
+        <input id="capacidadcarga" name="capacidadcarga" type="number" placeholder="Ingrese capacidad del camion" class="input"/><br>
+        <button type="submit">Enviar</button>
+    </form>
+</div>
+</body>
+</html>

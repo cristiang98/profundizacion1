@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        .container {
+            width: 50%;
+            margin: 0 auto;
+            text-align: center;
+            margin-top: 100px;
+            height: 50vh;
+            font-size:20px;
+            box-shadow: 0 0 10px 0 rgba(0,0,0,0.9);
+        }
+        .label {
+            margin-top: 20px;
+            display: block;
+            margin-bottom: 10px;
+        }
+        input {
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .input {
+            width: 50%;
+            margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        h1{
+            text-align: center;
+            margin-top: 10%;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Formulario de Camiones</h1>
+
+    <form action="/procesar-formulario" method="post">
+        <label for="marca" class="label">Marca del camion</label>
+        <input id="marca" name="marca" type="text" placeholder="Ingrese la marca del camion" class="input"/> <br>
+        <label for="modelo" class="label">Modelo del camion</label>
+        <input id="modelo" name="modelo" type="text" placeholder="Ingrese modelo del camion" class="input"/><br>
+        <label for="capacidadcarga" class="label">Capacidad del vehiculo</label>
+        <input id="capacidadcarga" name="capacidadcarga" type="number" placeholder="Ingrese capacidad del camion" class="input"/><br>
+        <button type="submit">Enviar</button>
+    </form>
+</div>
+
+
+</body>
+</html>
+
+
